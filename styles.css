@@ -13,41 +13,71 @@ body {
     padding: 15px;
 }
 
-picture > img {
-    width: 100%;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hamburger {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 10px 0;
     cursor: pointer;
 }
 
-.close-menu {
-    display: none;
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: black;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.open{
-    position: absolute;
+.nav-links {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 75%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 75vw;
+    text-align: left;
     background-color: white;
-    height: 100vw;
+    transition: .5s;
+    padding: 20px;
+} 
+
+.nav-links.active {
+    right: 0;
 }
 
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
 
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
 
-nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+li {
+    padding: 20px;
+}
+
+li a {
+    color: hsl(240, 100%, 5%);
+}
+
+li a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+picture > img {
+    width: 100%;
 }
 
 h1 {
@@ -158,9 +188,22 @@ aside h2 {
         padding: 50px;
     }
 
-    .links {
+    .hamburger {
+        display: none;
+    }
+
+
+    .nav-links {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        width: auto;
+        height: auto;
         display: flex;
-        gap: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0;
     }
 
     .links li a {
@@ -169,11 +212,6 @@ aside h2 {
 
     .links li a:hover {
         color: hsl(5, 85%, 63%);
-    }
-
-    .hamburger,
-    .close-menu {
-        display: none;
     }
 
     aside {

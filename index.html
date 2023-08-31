@@ -7,9 +7,7 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="styles.css">
 
     <title>Frontend Mentor | News homepage</title>
@@ -17,25 +15,26 @@
 
 <body>
     <nav>
-        <div class="logo">
-            <img src="assets/images/logo.svg" alt="logo">
+        
+        <img src="assets/images/logo.svg" alt="logo">
+        
+    
+        <ul class="nav-links">
+            <li><a class="link" href="#home">Home</a></li>
+            <li><a class="link" href="#new">New</a></li>
+            <li><a class="link" href="#popular">Popular</a></li>
+            <li><a class="link" href="#">Trending</a></li>
+            <li><a class="link" href="#">Categories</a></li>
+        </ul>
+        
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
-        <div class="navlinks">
-            <div class="close-menu">
-                <img src="assets/images/icon-menu-close.svg" alt="menu close">
-            </div>
-            <ul class="links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Popular</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Categories</a></li>
-            </ul>
-        </div>
-        <div class="hamburger"><img src="assets/images/icon-menu.svg" alt="menu icon"></div>
     </nav>
     <main>
-        <div class="container1">
+        <div class="container1" id="home">
             <section>
                 <div class="body-img">
                     <picture>
@@ -58,7 +57,7 @@
                     </div>
                 </div>
             </section>
-            <aside>
+            <aside id="new">
                 <h2>New</h2>
                 <div class="sections">
                     <h3><a href="#">Hydrogen VS Electric Cars</a></h3>
@@ -74,7 +73,7 @@
                 </div>
             </aside>
         </div>
-        <div class="container">
+        <div class="container" id="popular">
             <div class="content1">
                 <div class="img">
                     <img src="assets/images/image-retro-pcs.jpg" alt="retro pcs">

@@ -1,15 +1,14 @@
-const openBtn = document.querySelector(".hamburger");
-const closeBtn = document.querySelector(".close-menu");
-const navLinks = document.querySelector("ul");
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-openBtn.addEventListener('click', () => {
-    openBtn.style.display = "none"
-    closeBtn.style.display = "block"
-    navLinks.classList.add('open')
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active')
+    hamburger.classList.toggle('active')
 })
 
-closeBtn.addEventListener('click', () => {
-    closeBtn.style.display = "none"
-    openBtn.style.display = "block"
-    navLinks.classList.remove('open')
-})
+document.querySelectorAll(".link").forEach((n) => {
+    n.addEventListener('click', () => {
+        hamburger.classList.remove('active')
+        navLinks.classList.remove('active')
+    })
+});
