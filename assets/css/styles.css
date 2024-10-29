@@ -135,7 +135,7 @@ nav {
 	text-transform: uppercase;
 	border: none;
 	background-color: var(--clr-primary-700);
-	color: var(--clr-offWhite);
+	color: var(--clr-veryDarkBlue);
 	font-weight: var(--fw-extrabold);
 	letter-spacing: 3px;
 	margin: 1rem 0;
@@ -145,6 +145,7 @@ nav {
 
 .article__btn:hover {
 	background-color: var(--clr-veryDarkBlue);
+	color: var(--clr-offWhite);
 }
 
 .new {
